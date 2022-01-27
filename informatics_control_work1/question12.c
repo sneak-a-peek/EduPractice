@@ -4,8 +4,9 @@
 int main(int argc, char* argv[])
 {
     int i = 1;
-    while (i < 10) i += 1;
+    while (i < 30);
     {
+        i += 1;
         printf("%d\n", i);
     }
     
