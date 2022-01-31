@@ -11,7 +11,7 @@ int main(int argc, char* argv[])
     //printf("%f\n", square_formula);
     //printf("%f\n", circle_formula);
 
-    if (square_formula <= 2 && circle_formula <= 2)
+    if (square_formula <= 2 || circle_formula <= 1)
         printf("Точка принадлежит заданной области\n");
     else printf("Точка не принадлежит заданной области\n");
 
