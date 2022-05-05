@@ -2,6 +2,14 @@
 #include <stdlib.h>
 #include <math.h>
 
+/*
+ 
+В одномерном массиве, состоящем из N целых элементов, вычислить:
+A) количество элементов массива, больших по значению, чем среднее арифметическое максимального и минимального элементов;
+Б) произведение элементов массива, расположенных между первым и последним отрицательными элементами; 
+В) количество чётных элементов, значения которых вошли в интервал [a, b], значения a, b задавать с клавиатуры;
+
+*/
 int main(int argc, char* argv[])
 {
     int size;
@@ -41,13 +49,13 @@ int main(int argc, char* argv[])
     printf("Среднее арифметическое от суммы минимального и максимального значений: %d\n", min_max_average);
 
     // Количество элементов массива больших по значению, чем среднее арифметическое максимального и минимального элементов
-    int* newArray = (int *)malloc(sizeof(int)*size + 1); 
-    for (counter = 0; counter < size; counter++) 
-       if (randArray[counter] > min_max_average)
-            printf("%d больше чем %d\n", randArray[counter], min_max_average);
-            // TODO Как добавить все подходящие элементы в новый массив?
-            newArray
-            printf("%d\n", newArray[3]);
+    //int* newArray = (int *)malloc(sizeof(int)*size + 1); 
+    //for (counter = 0; counter < size; counter++) 
+    //   if (randArray[counter] > min_max_average)
+    //        printf("%d больше чем %d\n", randArray[counter], min_max_average);
+    //        // TODO Как добавить все подходящие элементы в новый массив?
+    //        newArray
+    //       printf("%d\n", newArray[3]);
 
     return 0;
 }
