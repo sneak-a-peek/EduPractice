@@ -58,3 +58,50 @@ int Vector::getMin() const {
 void Vector::sort() {
     std::sort(array, array + size);
 }
+
+// Перегрузка оператора присваивания
+Vector& Vector::operator=(const Vector& other) {
+    if (this == &other) {
+        return *this;
+    }
+    
+    delete[] array;
+    size = other.size;
+    array = new int[size];
+    for (int i = 0; i < size; i++) {
+        array[i] = other.array[i];
+    }
+    return *this;
+}
+
+// Перегрузка оператора сложения
+Vector Vector::operator+(const Vector& other) const {
+    int newSize = size > other.size ? size : other.size;
+    Vector result(newSize);
+    for (int i = 0; i < newSize; i++) {
+        if (i < size && i < other.size) {
+            result.array[i] = array[i] + other.array[i];
+        } else if (i < size) {
+            result.array[i] = array[i];
+        } else {
+            result.array[i] = other.array[i];
+        }
+    }
+    return result;
+}
+
+// Перегрузка оператора вычитания
+Vector Vector::operator-(const Vector& other) const {
+    int newSize = size > other.size ? size : other.size;
+    Vector result(newSize);
+    for (int i = 0; i < newSize; i++) {
+        if (i < size && i < other.size) {
+            result.array[i] = array[i] - other.array[i];
+        } else if (i < size) {
+            result.array[i] = array[i];
+        } else {
+            result.array[i] = -other.array[i];
+        }
+    }
+    return result;
+}
