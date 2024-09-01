@@ -14,6 +14,11 @@ public:
     int getMax() const; // поиск максимального значения
     int getMin() const; // поиск минимального значения
     void sort(); // сортировка массива
+
+    // Перегрузка операторов
+    Vector& operator=(const Vector& other);
+    Vector operator+(const Vector& other) const;
+    Vector operator-(const Vector& other) const;
 };
 
 #endif
